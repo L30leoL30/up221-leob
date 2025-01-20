@@ -15,6 +15,6 @@ Use the Bureau of Labor Statistics employment and wage database to track how emp
 ## My objectives for the class: 
 Gain a working understanding of python and the ability to create presentation-quality maps without using ArcGIS. 
 
-git clone https://github.com/<L30leoL30>/<up221-leob>.git
+
 
 
