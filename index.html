@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Maps</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .map-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .map-container img { width: 45%; height: auto; border: 1px solid #ccc; padding: 5px; }
+        select { width: 50%; padding: 10px; font-size: 16px; }
+        button { margin: 10px; padding: 10px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Select Industry Maps to Display</h1>
+    <select id="map-select" multiple size="6">
+        <option value="Food Production_Total Establishments 2024.png">Food Production Total Establishments 2024</option>
+        <option value="Farm Labor_Total Establishments 2024.png">Farm Labor Total Establishments 2024</option>
+        <option value="Domestic & Homecare_Total Employment 2024.png">Domestic & Homecare Total Employment 2024</option>
+        <option value="Food Production_Change in Average Yearly Wage 2020-2024.png">Food Production Change in Average Yearly Wage 2020-2024</option>
+        <option value="Carwash_Total Employment 2024.png">Carwash Total Employment 2024</option>
+        <option value="Janitorial_Change in Average Yearly Wage 2020-2024.png">Janitorial Change in Average Yearly Wage 2020-2024</option>
+        <option value="Farm Labor_Average Yearly Wage 2024.png">Farm Labor Average Yearly Wage 2024</option>
+        <option value="Janitorial_Average Yearly Wage 2024.png">Janitorial Average Yearly Wage 2024</option>
+        <option value="Domestic & Homecare_Total Establishments 2024.png">Domestic & Homecare Total Establishments 2024</option>
+        <option value="Garment_Change in Average Yearly Wage 2020-2024.png">Garment Change in Average Yearly Wage 2020-2024</option>
+        <option value="Carwash_Average Yearly Wage 2024.png">Carwash Average Yearly Wage 2024</option>
+        <option value="Carwash_Total Establishments 2024.png">Carwash Total Establishments 2024</option>
+        <option value="Farm Labor_Change in Average Yearly Wage 2020-2024.png">Farm Labor Change in Average Yearly Wage 2020-2024</option>
+        <option value="Domestic & Homecare_Average Yearly Wage 2024.png">Domestic & Homecare Average Yearly Wage 2024</option>
+        <option value="Garment_Average Yearly Wage 2024.png">Garment Average Yearly Wage 2024</option>
+        <option value="Food Production_Total Employment 2024.png">Food Production Total Employment 2024</option>
+        <option value="Garment_Change in Employment 2020-2024.png">Garment Change in Employment 2020-2024</option>
+        <option value="Food Production_Change in Employment 2020-2024.png">Food Production Change in Employment 2020-2024</option>
+        <option value="Garment_Total Employment 2024.png">Garment Total Employment 2024</option>
+        <option value="Carwash_Change in Employment 2020-2024.png">Carwash Change in Employment 2020-2024</option>
+        <option value="Farm Labor_Total Employment 2024.png">Farm Labor Total Employment 2024</option>
+        <option value="Garment_Total Establishments 2024.png">Garment Total Establishments 2024</option>
+        <option value="Domestic & Homecare_Change in Employment 2020-2024.png">Domestic & Homecare Change in Employment 2020-2024</option>
+        <option value="Carwash_Change in Average Yearly Wage 2020-2024.png">Carwash Change in Average Yearly Wage 2020-2024</option>
+        <option value="Janitorial_Total Employment 2024.png">Janitorial Total Employment 2024</option>
+        <option value="Farm Labor_Change in Employment 2020-2024.png">Farm Labor Change in Employment 2020-2024</option>
+        <option value="Domestic & Homecare_Change in Average Yearly Wage 2020-2024.png">Domestic & Homecare Change in Average Yearly Wage 2020-2024</option>
+        <option value="Janitorial_Total Establishments 2024.png">Janitorial Total Establishments 2024</option>
+        <option value="Janitorial_Change in Employment 2020-2024.png">Janitorial Change in Employment 2020-2024</option>
+        <option value="Food Production_Average Yearly Wage 2024.png">Food Production Average Yearly Wage 2024</option>
+    
+    </select>
+    <br>
+    <button onclick="displayMaps()">Show Selected Maps</button>
+    <div class="map-container" id="map-container"></div>
+
+    <script>
+        function displayMaps() {
+            let container = document.getElementById("map-container");
+            container.innerHTML = "";
+            let selectedOptions = document.getElementById("map-select").selectedOptions;
+            for (let option of selectedOptions) {
+                let img = document.createElement("img");
+                img.src = "Industry_Maps/" + option.value;
+                img.alt = option.value;
+                container.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>
